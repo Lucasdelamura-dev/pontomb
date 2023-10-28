@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | Motorista MB</title>
+    <link rel="stylesheet" href="/styles/login.css">
+    <link rel="stylesheet" href="/fontawesome-free-6.4.2-web/css/all.css">
+    <link rel="stylesheet" href="/fontawesome-free-6.4.2-web/css/all.min.css">
+    <script src="https://kit.fontawesome.com/fec152a4d4.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body>
+    
+    <div class="login-container">
+        <h1>Login</h1> 
+        <img src="/img/mb-logo-lockup-dark-blue.svg" alt="" >
+        <form id="loginForm">
+            <div class="form-group">
+            <input type="text" id="username" name="username" required placeholder="Usuário" >
+            </div>
+            <div class="form-group">
+                <input type="password" id="password" name="password" required placeholder="Senha">
+            </div>
+            <button type="submit">Entrar</button>
+        </form>
+    </div>
+    
+    <script>
+        document.getElementById("loginForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+
+            if ((username === "admin" && password === "1234") || (username === "Lucas" && password === "0909")) {
+                window.location.href = "main.html";
+            } else {
+                alert("Usuário ou senha incorretos.");
+            }
+        });
+    </script>
+
+    <script>
+        // Obtém uma referência ao elemento canvas e ao botão de limpar
+const signatureCanvas = document.getElementById("signature-canvas");
+const limparAssinaturaButton = document.getElementById("limparAssinatura");
+
+// Adiciona um evento de clique ao canvas
+signatureCanvas.addEventListener("click", toggleFullscreen);
+
+// Função para alternar entre tela cheia e modo normal
+function toggleFullscreen() {
+    if (!document.fullscreenElement) {
+        signatureCanvas.requestFullscreen();
+    } else {
+        if (document.exitFullscreen) {
+            document.exitFullscreen();
+        }
+    }
+}
+
+    </script>
+    
+</body>
+</html>

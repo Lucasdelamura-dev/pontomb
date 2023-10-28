@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agradecimento | Motorista MB</title>
+    <link rel="stylesheet" href="/styles/thanks.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+</head>
+<body>
+    <div class="thanks-container">
+        <h1 id="thanks-message">Obrigado, [NOME]!</h1>
+        <p>Seu ponto foi enviado com sucesso.</p>
+    </div>
+
+
+
+
+    <script>
+       document.addEventListener("DOMContentLoaded", function () {
+    // Obtém o valor do nome do motorista da URL
+    const urlParams = new URLSearchParams(window.location.search);
+    const nomeMotorista = urlParams.get('motorista');
+
+    // Atualiza a mensagem de agradecimento com o nome do motorista
+    const thanksMessageElement = document.getElementById('thanks-message');
+    if (nomeMotorista && nomeMotorista !== "null") {
+        thanksMessageElement.textContent = `Obrigado, ${decodeURIComponent(nomeMotorista)}!`;
+    } else {
+        // Se o nome for null ou não estiver presente, exiba a mensagem padrão
+        thanksMessageElement.textContent = "Seu ponto foi enviado com sucesso.";
+    }
+
+    // Animação
+    gsap.from(".thanks-container", { opacity: 0, y: 50, duration: 1, delay: 0.5 });
+});
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jornada | MB</title>
+    <link rel="stylesheet" href="/styles/style.css">
+    <link rel="stylesheet" href="/fontawesome-free-6.4.2-web/css/all.css">
+    <link rel="stylesheet" href="/submit.js">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/signature_pad/1.5.3/signature_pad.min.js"></script>
+
+</head>
+
+<body>
+    <header>
+        <div class="header-content">
+            
+            <h1 class="thead" id="thead">Diário de Bordo do Motorista - Martin Brower</h1>
+        </div>
+    </header>
+    <img src="/img/mb-logo-lockup-dark-blue.svg" alt="Martin Brower Logo" width="50%" class="img-top">
+    <div class="container">
+        <h1>Ponto</h1>
+        <form action="https://api.sheetmonkey.io/form/khnm6XQfYQYDnc6HMzU9Sh" method="post" id="form-main">
+            <!-- Campos do formulário -->
+            <input type="hidden" name="Created" value="x-sheetmonkey-current-date-time"/>
+            <div class="form-group2">
+                <label for="nome">Nome | Matrícula</label>
+                <input type="text" id="motorista" name="Motorista" >
+            </div>
+            <div class="form-group2">
+                <label for="rota">Rota</label>
+                <input type="text" id="rota" name="rota" >
+            </div>
+            <h3>Lista de Códigos</h3>
+            <ul class="ul-top2">
+                <li><strong>1</strong> - Início de jornada</li>
+                <li><strong>2</strong> - Descanço | Almoço</li>
+                <li><strong>3</strong> - Início de descarga</li>
+                <li><strong>4</strong> - Fim de descarga</li>
+                <li><strong>5</strong> - Chegada no cliente</li>
+                <li><strong>9</strong> - Fim de rotas</li>
+                <li><strong>11</strong> - Fim de jornada</li>
+            </ul>
+
+            
+            <input type="text" name="data" id="data" readonly placeholder="Clique aqui para registrar a data">
+            <div class="form-group"> 
+                <i class="fa-solid fa-truck-fast"></i>
+                <select id="macro1" name="macro1">
+                    <option value="" selected disabled>Macro</option>
+                    <option value="inicio">Inicio de jornada</option>
+                    <option value="chegada_loja1">Chegada loja 1</option>
+                    <option value="descarga_loja1">Descarga loja 1</option>
+                    <option value="entregue_loja1">Entregue loja 1</option>
+                    <option value="chegada_loja2">Chegada loja 2</option>
+                    <option value="descarga_loja2">Descarga loja 2</option>
+                    <option value="entregue_loja2">Entregue loja 2</option>
+                    <option value="chegada_loja3">Chegada loja 3</option>
+                    <option value="descarga_loja3">Descarga loja 3</option>
+                    <option value="entregue_loja3">Entregue loja 3</option>
+                    <option value="chegada_loja4">Chegada loja 4</option>
+                    <option value="descarga_loja4">Descarga loja 4</option>
+                    <option value="entregue_loja4">Entregue loja 4</option>
+                    <option value="em_rota_cd">Em rota para o CD</option>
+                    <option value="chegada_cd">Chegada no CD</option>
+                    <option value="fim_viagem">Fim de viagem</option>
+                </select>
+                <input type="text" name="hora1" id="hora1" readonly placeholder="Hora">
+            </div>
+            
+            <!-- Repita o bloco acima para outros campos de seleção e data/hora -->
+
+            <div class="form-group">
+
+                <i class="fa-solid fa-truck-fast"></i>
+                <select id="macro2" name="macro2">
+                    <option value="" selected disabled>Macro</option>
+                    <option value="inicio">Inicio de jornada</option>
+                    <option value="chegada_loja1">Chegada loja 1</option>
+                    <option value="descarga_loja1">Descarga loja 1</option>
+                    <option value="entregue_loja1">Entregue loja 1</option>
+                    <option value="chegada_loja2">Chegada loja 2</option>
+                    <option value="descarga_loja2">Descarga loja 2</option>
+                    <option value="entregue_loja2">Entregue loja 2</option>
+                    <option value="chegada_loja3">Chegada loja 3</option>
+                    <option value="descarga_loja3">Descarga loja 3</option>
+                    <option value="entregue_loja3">Entregue loja 3</option>
+                    <option value="chegada_loja4">Chegada loja 4</option>
+                    <option value="descarga_loja4">Descarga loja 4</option>
+                    <option value="entregue_loja4">Entregue loja 4</option>
+                    <option value="em_rota_cd">Em rota para o CD</option>
+                    <option value="chegada_cd">Chegada no CD</option>
+                    <option value="fim_viagem">Fim de viagem</option>
+                </select>
+                <input type="text" name="hora2" id="hora2" readonly placeholder="Hora">
+            </div>
+
+            <div class="form-group">
+                <i class="fa-solid fa-truck-fast"></i>
+                <select id="macro3" name="macro3">
+                    <option value="" selected disabled>Macro</option>
+                    <option value="" selected disabled>Macro</option>
+                    <option value="inicio">Inicio de jornada</option>
+                    <option value="chegada_loja1">Chegada loja 1</option>
+                    <option value="descarga_loja1">Descarga loja 1</option>
+                    <option value="entregue_loja1">Entregue loja 1</option>
+                    <option value="chegada_loja2">Chegada loja 2</option>
+                    <option value="descarga_loja2">Descarga loja 2</option>
+                    <option value="entregue_loja2">Entregue loja 2</option>
+                    <option value="chegada_loja3">Chegada loja 3</option>
+                    <option value="descarga_loja3">Descarga loja 3</option>
+                    <option value="entregue_loja3">Entregue loja 3</option>
+                    <option value="chegada_loja4">Chegada loja 4</option>
+                    <option value="descarga_loja4">Descarga loja 4</option>
+                    <option value="entregue_loja4">Entregue loja 4</option>
+                    <option value="em_rota_cd">Em rota para o CD</option>
+                    <option value="chegada_cd">Chegada no CD</option>
+                    <option value="fim_viagem">Fim de viagem</option>
+                </select>
+                <input type="text" name="hora3" id="hora3" readonly placeholder="Hora">
+            </div>
+
+            <div class="form-group">
+                <i class="fa-solid fa-truck-fast"></i>
+                <select id="macro4" name="macro4">
+                    <option value="" selected disabled>Macro</option>
+                    <option value="" selected disabled>Macro</option>
+                    <option value="inicio">Inicio de jornada</option>
+                    <option value="chegada_loja1">Chegada loja 1</option>
+                    <option value="descarga_loja1">Descarga loja 1</option>
+                    <option value="entregue_loja1">Entregue loja 1</option>
+                    <option value="chegada_loja2">Chegada loja 2</option>
+                    <option value="descarga_loja2">Descarga loja 2</option>
+                    <option value="entregue_loja2">Entregue loja 2</option>
+                    <option value="chegada_loja3">Chegada loja 3</option>
+                    <option value="descarga_loja3">Descarga loja 3</option>
+                    <option value="entregue_loja3">Entregue loja 3</option>
+                    <option value="chegada_loja4">Chegada loja 4</option>
+                    <option value="descarga_loja4">Descarga loja 4</option>
+                    <option value="entregue_loja4">Entregue loja 4</option>
+                    <option value="em_rota_cd">Em rota para o CD</option>
+                    <option value="chegada_cd">Chegada no CD</option>
+                    <option value="fim_viagem">Fim de viagem</option>
+                </select>
+                <input type="text" name="hora4" id="hora4" readonly placeholder="Hora">
+            </div>
+
+            <div class="form-group">
+                <i class="fa-solid fa-truck-fast"></i>
+                <select id="macro5" name="macro5">
+                    <option value="" selected disabled>Macro</option>
+                    <option value="" selected disabled>Macro</option>
+                    <option value="inicio">Inicio de jornada</option>
+                    <option value="chegada_loja1">Chegada loja 1</option>
+                    <option value="descarga_loja1">Descarga loja 1</option>
+                    <option value="entregue_loja1">Entregue loja 1</option>
+                    <option value="chegada_loja2">Chegada loja 2</option>
+                    <option value="descarga_loja2">Descarga loja 2</option>
+                    <option value="entregue_loja2">Entregue loja 2</option>
+                    <option value="chegada_loja3">Chegada loja 3</option>
+                    <option value="descarga_loja3">Descarga loja 3</option>
+                    <option value="entregue_loja3">Entregue loja 3</option>
+                    <option value="chegada_loja4">Chegada loja 4</option>
+                    <option value="descarga_loja4">Descarga loja 4</option>
+                    <option value="entregue_loja4">Entregue loja 4</option>
+                    <option value="em_rota_cd">Em rota para o CD</option>
+                    <option value="chegada_cd">Chegada no CD</option>
+                    <option value="fim_viagem">Fim de viagem</option>
+                </select>
+                <input type="text" name="hora5" id="hora5" readonly placeholder="Hora">
+            </div>
+
+            <div class="form-group">
+                <i class="fa-solid fa-truck-fast"></i>
+                <select id="macro6" name="macro6">
+                    <option value="" selected disabled>Macro</option>
+                    <option value="inicio">Inicio de jornada</option>
+                    <option value="chegada_loja1">Chegada loja 1</option>
+                    <option value="descarga_loja1">Descarga loja 1</option>
+                    <option value="entregue_loja1">Entregue loja 1</option>
+                    <option value="chegada_loja2">Chegada loja 2</option>
+                    <option value="descarga_loja2">Descarga loja 2</option>
+                    <option value="entregue_loja2">Entregue loja 2</option>
+                    <option value="chegada_loja3">Chegada loja 3</option>
+                    <option value="descarga_loja3">Descarga loja 3</option>
+                    <option value="entregue_loja3">Entregue loja 3</option>
+                    <option value="chegada_loja4">Chegada loja 4</option>
+                    <option value="descarga_loja4">Descarga loja 4</option>
+                    <option value="entregue_loja4">Entregue loja 4</option>
+                    <option value="em_rota_cd">Em rota para o CD</option>
+                    <option value="chegada_cd">Chegada no CD</option>
+                    <option value="fim_viagem">Fim de viagem</option>
+                </select>
+                <input type="text" name="hora6" id="hora6" readonly placeholder="Hora">
+            </div>
+
+            <div class="form-group">
+                <i class="fa-solid fa-truck-fast"></i>
+                <select id="macro7" name="macro7">
+                    <option value="" selected disabled>Macro</option>
+                    <option value="inicio">Inicio de jornada</option>
+                    <option value="chegada_loja1">Chegada loja 1</option>
+                    <option value="descarga_loja1">Descarga loja 1</option>
+                    <option value="entregue_loja1">Entregue loja 1</option>
+                    <option value="chegada_loja2">Chegada loja 2</option>
+                    <option value="descarga_loja2">Descarga loja 2</option>
+                    <option value="entregue_loja2">Entregue loja 2</option>
+                    <option value="chegada_loja3">Chegada loja 3</option>
+                    <option value="descarga_loja3">Descarga loja 3</option>
+                    <option value="entregue_loja3">Entregue loja 3</option>
+                    <option value="chegada_loja4">Chegada loja 4</option>
+                    <option value="descarga_loja4">Descarga loja 4</option>
+                    <option value="entregue_loja4">Entregue loja 4</option>
+                    <option value="em_rota_cd">Em rota para o CD</option>
+                    <option value="chegada_cd">Chegada no CD</option>
+                    <option value="fim_viagem">Fim de viagem</option>
+                </select>
+                <input type="text" name="hora7" id="hora7" readonly placeholder="Hora">
+            </div>
+
+            <div class="form-group">
+                <i class="fa-solid fa-truck-fast"></i>
+                <select id="macro8" name="macro8">
+                    <option value="" selected disabled>Macro</option>
+                    <option value="inicio">Inicio de jornada</option>
+                    <option value="chegada_loja1">Chegada loja 1</option>
+                    <option value="descarga_loja1">Descarga loja 1</option>
+                    <option value="entregue_loja1">Entregue loja 1</option>
+                    <option value="chegada_loja2">Chegada loja 2</option>
+                    <option value="descarga_loja2">Descarga loja 2</option>
+                    <option value="entregue_loja2">Entregue loja 2</option>
+                    <option value="chegada_loja3">Chegada loja 3</option>
+                    <option value="descarga_loja3">Descarga loja 3</option>
+                    <option value="entregue_loja3">Entregue loja 3</option>
+                    <option value="chegada_loja4">Chegada loja 4</option>
+                    <option value="descarga_loja4">Descarga loja 4</option>
+                    <option value="entregue_loja4">Entregue loja 4</option>
+                    <option value="em_rota_cd">Em rota para o CD</option>
+                    <option value="chegada_cd">Chegada no CD</option>
+                    <option value="fim_viagem">Fim de viagem</option>
+                </select>
+                <input type="text" name="hora8" id="hora8" readonly placeholder="Hora">
+            </div>
+            <br>
+            
+            <div class="form-group2 caixa">
+                <label for="caixa">Quantidade de caixa movimentada</label>
+                <input type="number" id="rota" name="caixas" >
+            </div>
+            
+            <br>
+            <div class="form-group-texto">
+                <label for="texto"> Justificativa </label>
+                <p>Descreva aqui qualquer inconformidade com as entregas <br>Ex: Motivo do atraso, estouro de Hr Extra, avaria, sobra falta...</p>
+                <textarea id="textoend" name="Justificativa" rows="4" cols="50"></textarea>
+            </div>
+            <br><br>
+
+            <div class="form-group-assinatura">
+                <label for="assinatura">Assinatura Digital</label>
+                <div id="signature-pad" class="signature-pad">
+                    <canvas></canvas>
+                    <button type="button" id="limparAssinatura">Limpar</button>
+                </div>
+                <input type="hidden" id="assinaturaBase64" name="assinatura">
+            </div>
+            <br>
+            <input type="submit" value="Enviar" class="btn-submit">
+        </form>
+
+        
+    
+    <script>
+        // Função para ajustar o tamanho da caixa de texto dinamicamente
+        function autoResize() {
+            const textarea = document.getElementById("textoend");
+            textarea.style.height = "auto";
+            textarea.style.height = textarea.scrollHeight + "px";
+        }
+
+        const handleSubmit = (event) => {
+  event.preventDefault();
+        }
+
+     </script>
+     
+     <script>
+        const signaturePad = new SignaturePad(document.querySelector("canvas"));
+        const limparAssinaturaBtn = document.getElementById("limparAssinatura");
+        const assinaturaBase64Input = document.getElementById("assinaturaBase64");
+    
+        limparAssinaturaBtn.addEventListener("click", () => {
+            signaturePad.clear();
+            assinaturaBase64Input.value = "";
+        });
+    
+        signaturePad.onEnd = () => {
+            assinaturaBase64Input.value = signaturePad.toDataURL();
+        };
+    </script> 
+
+<script>
+    // Obtém uma referência ao elemento canvas e ao botão de limpar
+const signatureCanvas = document.getElementById("signature-canvas");
+const limparAssinaturaButton = document.getElementById("limparAssinatura");
+
+// Adiciona um evento de clique ao canvas
+signatureCanvas.addEventListener("click", toggleFullscreen);
+
+// Função para alternar entre tela cheia e modo normal
+function toggleFullscreen() {
+if (!document.fullscreenElement) {
+    signatureCanvas.requestFullscreen();
+} else {
+    if (document.exitFullscreen) {
+        document.exitFullscreen();
+    }
+}
+}
+
+</script>
+
+<script>
+    const inputHoras = [
+        document.getElementById('hora1'),
+        document.getElementById('hora2'),
+        document.getElementById('hora3'),
+        document.getElementById('hora4'),
+        document.getElementById('hora5'),
+        document.getElementById('hora6'),
+        document.getElementById('hora7'),
+        document.getElementById('hora8')
+    ];
+
+    const inputData = document.getElementById('data');
+
+    // Função para definir a hora atual quando clicado
+    function definirHoraAtual(inputHora) {
+        if (inputHora.value === '') {
+            const horaAtual = new Date();
+            const horaAtualFormatada = horaAtual.toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'});
+            inputHora.value = horaAtualFormatada;
+
+            // Desativar o campo de hora após 1 minuto
+            setTimeout(function() {
+                inputHora.disabled = true;
+            }, 60000); // 1 minuto em milissegundos
+        }
+    }
+
+    // Função para definir a data atual quando clicado
+    function definirDataAtual(inputData) {
+        if (inputData.value === '') {
+            const dataAtual = new Date();
+            const dataAtualFormatada = dataAtual.toLocaleDateString();
+            inputData.value = dataAtualFormatada;
+
+            // Desativar o campo de data após 1 minuto
+            setTimeout(function() {
+                inputData.disabled = true;
+            }, 60000); // 1 minuto em milissegundos
+        }
+    }
+
+    // Chamar a função quando um campo de entrada de hora for clicado
+    for (const inputHora of inputHoras) {
+        inputHora.addEventListener('click', function() {
+            definirHoraAtual(inputHora);
+        });
+    }
+
+    // Chamar a função quando o campo de entrada de data for clicado
+    inputData.addEventListener('click', function() {
+        definirDataAtual(inputData);
+    });
+</script>
+
+
+<script>
+    // Function to handle form submission and redirect
+    async function handleFormSubmission(event) {
+        event.preventDefault(); // Prevent default form submission
+        const form = event.target; // Get the form element
+
+        try {
+            const response = await fetch(form.action, {
+                method: form.method,
+                body: new FormData(form)
+            });
+
+            if (response.ok) {
+                // Form submission was successful, redirect to thanks.html with motorista name
+                const motoristaName = document.getElementById("motorista").value; // Replace with actual input ID
+                window.location.href = `/thanks.html?motorista=${encodeURIComponent(motoristaName)}`;
+            } else {
+                // Handle error cases if needed
+                console.error("Form submission failed");
+            }
+        } catch (error) {
+            console.error("An error occurred during form submission:", error);
+        }
+    }
+
+    // Attach the form submission handler to the form
+    document.addEventListener("DOMContentLoaded", function () {
+        const form = document.getElementById("form-main");
+        form.addEventListener("submit", handleFormSubmission);
+    });
+</script>
+
+
+</body>
+</html>
+
+
